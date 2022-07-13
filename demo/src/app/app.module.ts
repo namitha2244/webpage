@@ -8,7 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NftComponent } from './nft/nft.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AttributesComponent } from './attributes/attributes.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ClipboardModule } from "@angular/cdk/clipboard";
 
@@ -17,7 +17,7 @@ import { ClipboardModule } from "@angular/cdk/clipboard";
     AppComponent,
     NftComponent,
     NavbarComponent,
-    AttributesComponent
+    
   ],
   imports: [
     BrowserModule,
