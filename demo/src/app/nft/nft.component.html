@@ -1,0 +1,95 @@
+<app-navbar (searchTextChanged)="onSearchTextEntered($event)"></app-navbar>
+<h6>NFT Token</h6>
+<br>
+
+<div class="Hanuman">
+    <div class="H-img">
+        <img src="{{data1.metadata.data.image}}" width="200px" height="180px">
+        
+    </div>
+
+
+<div class="H-content"  >
+    
+<p  id="p1">NFT Name <span id="c1">:</span>
+<span id="d1">{{ data1.metadata.data.name }}</span></p>
+
+<p id="p1">Creator <span id="c2">:</span>
+
+<select name="" id="a1" >
+<option value="" id="a1">select creators</option>
+<option value="" id="a1" *ngFor="let address of data1.metadata.data.properties.creators">{{ address.address}}</option></select> </p>
+
+<p id="p1">Token ID <span id="c3">:</span>
+<span id="s2">{{data1.metadata.mint}}</span> <i class="fa fa-clone" aria-hidden="true"></i></p>
+
+<p id="p1">Mint ID<span id="c4">:</span>
+<span id="s3">{{data1.tokenInfo.tokenAuthority}}</span> <i class="fa fa-clone" aria-hidden="true"></i></p>
+
+<p id="p1">Total <span id="c5">:</span>
+<span id="s4">{{data1.tokenInfo.supply}}</span></p>
+</div>
+</div>
+<br>
+
+<div class="tabs">
+
+<mat-tab-group color="none">
+    <mat-tab  label="Attributes"> 
+        <div class="value" >
+        <div class="table">
+    
+        
+            <table class="Attributes">
+                <th>trait type</th>
+                <th>value</th>
+                <tr *ngFor="let attribute of data1.metadata.data.attributes" >
+                  
+                    <td >{{attribute.trait_type}}</td>
+                    <td style="width: 200px;">{{attribute.value}}</td>
+                </tr>
+</table>
+</div>
+</div><br><br><br>
+</mat-tab>
+
+    <mat-tab id="tab2" label="MetaData"> 
+        <div class="details" >
+        <p >{{nft1}}</p>
+        <p >"updateAuthority" <span >:</span>
+        <span id="r1">{{ data1.metadata.updateAuthority}}</span></p>
+
+        <p >"mint" <span >:</span>
+         <span id="r1">{{data1.tokenInfo.tokenAuthority}}</span></p>
+
+        <p>"data" <span>:</span></p>
+        <p >"name" <span >:</span>
+        <span  id="r1">{{data1.metadata.data.name}}</span></p>
+
+        <p >"symbol" <span >:</span>
+        <span id="r1">{{data1.metadata.data.symbol}}</span></p>
+
+        <p >"uri" <span >:</span>
+        <span id="u1">{{data1.metadata.data.uri}}</span></p>
+
+        <p >"sellerFeeBasisPoints" <span >:</span>
+        <span >{{data1.metadata.data.seller_fee_basis_points}}</span></p>
+        <p>"creators":[</p>
+        <p >"address" <span >:</span>
+        <span id="r1" >{{data1.account}}</span></p>
+        <p >"verified" <span >:</span>
+        <span >{{data1.tokenInfo.supply}}</span></p>
+        <p >"share" <span >:</span>
+        <span >{{data1.tokenInfo.supply}}</span></p>
+        <p>]</p>
+    </div>
+    <br>
+<br><br>
+
+ </mat-tab>
+
+    
+</mat-tab-group>
+</div>
+
+  
